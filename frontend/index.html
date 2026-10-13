@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PICHOSdefender Scanner</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            LOS<span>DEFENDER</span>
+        </div>
+
+        <div class="nav-status">
+            ● analisador online
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="badge">
+                LOS PICHOS DEFENDER 
+            </div>
+
+            <h1>
+                TESTE qualquer URL.
+                <br>
+                <span>Descubra se ela é realmente segura.</span>
+            </h1>
+
+            <p>
+                Consulte a reputação do link e veja os resultados dos mecanismos do VirusTotal.
+            </p>
+
+
+            <div class="search-box">
+
+                <input
+                    id="urlInput"
+                    type="text"
+                    placeholder="https://example.com"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="scanButton"
+                >
+                    SCAN
+                </button>
+
+            </div>
+
+            <div id="error"></div>
+
+        </section>
+
+
+        <section
+            id="loading"
+            class="loading hidden"
+        >
+
+            <div class="spinner"></div>
+
+            <h2>
+                Verificando os mecanismos de segurança...
+            </h2>
+
+            <p>
+                O resultado será exibido quando a análise do VirusTotal terminar.
+            </p>
+
+        </section>
+
+
+        <section
+            id="results"
+            class="results hidden"
+        >
+
+            <div class="result-header">
+
+                <div>
+
+                    <small>
+                        RESULTADO DA ANALISE PARA:
+                    </small>
+
+                    <h2 id="scannedUrl">
+                        —
+                    </h2>
+
+                </div>
+
+                <div
+                    id="overallStatus"
+                    class="overall clean"
+                >
+                    CLEAN
+                </div>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <strong id="cleanCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Seguros
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong id="warningCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Suspeitos
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong id="dangerCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Maliciosos
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong id="totalCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Motores
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="engine-list" id="engineList"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        LOS PICHOS DEFENDER · LUGAR ONDE A SEGURANÇA É LEI · 2024
+
+    </footer>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
